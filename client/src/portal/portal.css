@@ -1,0 +1,543 @@
+.portal {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.portal-side {
+  background: var(--navy);
+  color: #f4f7f2;
+  padding: 1.3rem 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.portal-top,
+.portal-drawer {
+  display: contents;
+}
+
+.portal-menu {
+  display: none;
+}
+
+.portal-brand {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.portal-brand img {
+  width: 42px;
+  height: 42px;
+}
+
+.portal-brand strong {
+  display: block;
+  font-size: 0.98rem;
+}
+
+.portal-brand span {
+  display: block;
+  color: #c9d4c4;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.portal-nav {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.portal-nav a {
+  color: #e7eee4;
+  text-decoration: none;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+}
+
+.portal-nav a:hover,
+.portal-nav a[aria-current="page"] {
+  background: rgba(58, 158, 30, 0.28);
+  color: white;
+}
+
+.portal-side footer {
+  margin-top: auto;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.portal-side footer p {
+  margin: 0;
+  color: #c9d4c4;
+  font-size: 0.88rem;
+}
+
+.portal-side button,
+.portal-main button,
+.portal-login button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.portal-main {
+  padding: 1.6rem 1.6rem 3rem;
+  min-width: 0;
+}
+
+.portal-main h1,
+.portal-login h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.portal-kicker {
+  margin: 0;
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.portal-lede {
+  margin: 0 0 1.2rem;
+  max-width: 46rem;
+  color: var(--muted);
+}
+
+.portal-stages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.portal-stage {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portal-stage:hover {
+  border-color: var(--brand);
+  color: inherit;
+}
+
+.portal-stage b {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 1.5rem;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.portal-card,
+.portal-table-wrap {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.portal-card h2,
+.portal-table-wrap h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.15rem;
+}
+
+.portal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.portal-list p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+.portal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.portal-table th,
+.portal-table td {
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  font-size: 0.95rem;
+}
+
+.portal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.portal-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.portal-form label {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.portal-form input,
+.portal-form select,
+.portal-form textarea {
+  font: inherit;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+}
+
+.portal-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.portal-days label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+.portal-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  background: var(--brand);
+  color: white;
+  font-weight: 650;
+}
+
+.portal-btn.line {
+  background: white;
+  color: var(--navy);
+  border: 1px solid var(--line);
+}
+
+.portal-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.portal-pill {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  background: #e7f6df;
+  color: #1d6b12;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.portal-pill.warn {
+  background: #fff4d8;
+  color: #8a5a00;
+}
+
+.portal-pill.muted {
+  background: #eef1ea;
+  color: var(--muted);
+}
+
+.portal-error {
+  color: #9d2c2c;
+  margin: 0.4rem 0;
+}
+
+.portal-note {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+}
+
+.portal-login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cream);
+}
+
+.portal-login-copy {
+  background: var(--navy);
+  color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portal-login-copy a {
+  color: white;
+}
+
+.portal-login-copy ol {
+  padding-left: 1.1rem;
+}
+
+.portal-login form {
+  padding: 3rem 2rem;
+  max-width: 34rem;
+}
+
+.portal-desks {
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.portal-desks button {
+  text-align: left;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+}
+
+.portal-wait {
+  padding: 2rem;
+}
+
+@media (max-width: 980px) {
+  .portal,
+  .portal-login,
+  .portal-grid,
+  .portal-stages {
+    grid-template-columns: 1fr;
+  }
+
+  .portal {
+    grid-template-rows: auto 1fr;
+  }
+
+  .portal-side {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    align-self: start;
+    display: block;
+    height: auto;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .portal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+  }
+
+  .portal-menu {
+    display: grid;
+    gap: 5px;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+  }
+
+  .portal-menu span {
+    display: block;
+    width: 1.05rem;
+    height: 1.5px;
+    background: white;
+  }
+
+  .portal-drawer {
+    display: none;
+  }
+
+  .portal-side.is-open .portal-drawer {
+    display: grid;
+    gap: 0.9rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 0.35rem 0.9rem 1rem;
+    background: var(--navy);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 36px rgba(14, 29, 64, 0.28);
+  }
+
+  .portal-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-nav a {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .portal-side footer a {
+    color: #d7e4ef;
+  }
+
+  .portal-main {
+    padding: 1.15rem 0.95rem 2.4rem;
+  }
+
+  .portal-main h1,
+  .portal-login h1 {
+    font-size: 2.05rem;
+  }
+
+  .portal-stages {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .portal-table-wrap {
+    overflow-x: auto;
+  }
+
+  .portal-table {
+    min-width: 34rem;
+  }
+
+  .portal-login-copy {
+    padding: 1.15rem 1.1rem 0.2rem;
+  }
+
+  .portal-login-copy ol,
+  .portal-login-copy > p:nth-of-type(2) {
+    display: none;
+  }
+
+  .portal-login form {
+    padding: 1.15rem 1.1rem 2rem;
+  }
+
+  .portal-desks button {
+    overflow-wrap: anywhere;
+  }
+}
+
+.portal-stops {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.portal-stop {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.35rem;
+  justify-items: start;
+}
+
+.portal-stop h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.portal-stop p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.portal-stop .portal-btn {
+  margin-top: 0.35rem;
+  text-decoration: none;
+}
+
+.portal-later {
+  margin: 1.4rem 0 0.7rem;
+  font-size: 1.2rem;
+}
+
+.portal-sign-field {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.portal-sign-field .portal-btn {
+  justify-self: start;
+}
+
+.portal-sign {
+  width: 100%;
+  height: 9rem;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: white;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.portal-actions .portal-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.portal-scan-preview,
+.portal-proof {
+  display: block;
+  width: 100%;
+  max-width: 36rem;
+  height: auto;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.portal-proofs {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.7rem;
+}
+
+.portal-proofs a {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.portal-proof-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 6.5rem;
+  padding: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+}
