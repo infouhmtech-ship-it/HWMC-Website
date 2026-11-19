@@ -18,6 +18,32 @@ const steps = [
   ["4. You get a receipt", "Payment is due on the day of service. Cash or cheque to HWM, with a receipt after the visit."],
 ];
 
+const slides = [
+  { src: "/assets/hero/collection.jpg", label: "Door-to-door collection" },
+  { src: "/assets/hero/cleaning.jpg", label: "Building cleaning" },
+  { src: "/assets/hero/recycling.jpg", label: "Sorting and recycling" },
+];
+
+function HeroSlides() {
+  return (
+    <div className="hero-slides">
+      {slides.map((slide) => (
+        <img key={slide.src} src={slide.src} alt="" />
+      ))}
+      <div className="hero-slide-bar">
+        {slides.map((slide) => (
+          <p key={slide.label}>{slide.label}</p>
+        ))}
+        <div className="hero-dots" aria-hidden="true">
+          {slides.map((slide) => (
+            <span key={slide.label}></span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   useEffect(() => {
     document.title = "Hygienic Waste Management Company | Lahore & Rawalpindi";
@@ -26,11 +52,6 @@ export default function Home() {
   return (
     <main id="content">
       <section className="hero">
-        <div className="hero-motion" aria-hidden="true">
-          <span className="orb orb-a"></span>
-          <span className="orb orb-b"></span>
-          <span className="orb orb-c"></span>
-        </div>
         <div className="wrap hero-grid">
           <div>
             <p className="kicker">Lahore and Rawalpindi · Since 2014</p>
@@ -46,15 +67,18 @@ export default function Home() {
               <li><strong>Registered</strong><span>LWMC, FBR, PRA, EPA, Registrar of Firms</span></li>
             </ul>
           </div>
-          <aside className="hero-card">
-            <p className="kicker">Call the desk</p>
-            <h2>0309-2914489</h2>
-            <p><a href="tel:+923092914489">Mobile and WhatsApp</a></p>
-            <p><a href="tel:+924235941169">Lahore landline 042-35941169</a></p>
-            <hr />
-            <p className="kicker">Head office</p>
-            <p>69-MZ Floor, Central Plaza, Barkat Market, Garden Town, Lahore.</p>
-            <p style={{ marginTop: "1rem" }}><Link to="/contact">Offices, map, and request form</Link></p>
+          <aside className="hero-visual">
+            <HeroSlides />
+            <div className="hero-card">
+              <p className="kicker">Call the desk</p>
+              <h2>0309-2914489</h2>
+              <p><a href="tel:+923092914489">Mobile and WhatsApp</a></p>
+              <p><a href="tel:+924235941169">Lahore landline 042-35941169</a></p>
+              <hr />
+              <p className="kicker">Head office</p>
+              <p>69-MZ Floor, Central Plaza, Barkat Market, Garden Town, Lahore.</p>
+              <p style={{ marginTop: "1rem" }}><Link to="/contact">Offices, map, and request form</Link></p>
+            </div>
           </aside>
         </div>
       </section>
